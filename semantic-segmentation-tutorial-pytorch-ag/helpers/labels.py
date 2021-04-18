@@ -59,40 +59,40 @@ Label = namedtuple( 'Label' , [
 labels = [
     #       name                     id    trainId   category            catId     hasInstances   ignoreInEval   color
     
-    Label(  'Pole'                 ,  0 ,        0 , 'object'          , 0       , False        , True         , (  0,  0, 64) ),
+    Label(  'Pole'                 ,  0 ,        0 , 'object'          , 0       , False        , False        , (  0,  0, 64) ),
     Label(  'Pole'                 ,  1 ,      255 , 'object'          , 0       , False        , True         , (192,192,128) ),
-    Label(  'SignSymbol'           ,  2 ,        1 , 'object'          , 0       , False        , True         , (128,128, 64) ),
+    Label(  'SignSymbol'           ,  2 ,        1 , 'object'          , 0       , False        , False        , (128,128, 64) ),
     Label(  'SignSymbol'           ,  3 ,      255 , 'object'          , 0       , False        , True         , (192,128,128) ),
     Label(  'SignSymbol'           ,  4 ,      255 , 'object'          , 0       , False        , True         , (  0, 64, 64) ),
     
     Label(  'Bicyclist'            ,  5 ,        2 , 'human'           , 1       , True         , False        , (  0,128,192) ),
-    Label(  'Bicyclist'            ,  6 ,      255 , 'human'           , 1       , True         , False        , (192,  0,192) ),
+    Label(  'Bicyclist'            ,  6 ,      255 , 'human'           , 1       , True         , True         , (192,  0,192) ),
     Label(  'Pedestrian'           ,  7 ,        3 , 'human'           , 1       , True         , False        , ( 64, 64,  0) ),
-    Label(  'Pedestrian'           ,  8 ,      255 , 'human'           , 1       , True         , False        , (192,128, 64) ),
-    Label(  'Pedestrian'           ,  9 ,      255 , 'human'           , 1       , True         , False        , ( 64,128, 64) ),
-    Label(  'Pedestrian'           , 10 ,      255 , 'human'           , 1       , True         , False        , ( 64,  0,192) ),
+    Label(  'Pedestrian'           ,  8 ,      255 , 'human'           , 1       , True         , True         , (192,128, 64) ),
+    Label(  'Pedestrian'           ,  9 ,      255 , 'human'           , 1       , True         , True         , ( 64,128, 64) ),
+    Label(  'Pedestrian'           , 10 ,      255 , 'human'           , 1       , True         , True         , ( 64,  0,192) ),
     
     Label(  'Building'             , 11 ,        4 , 'construction'    , 2       , False        , False        , ( 64,  0, 64) ),
-    Label(  'Building'             , 12 ,      255 , 'construction'    , 2       , False        , False        , (128,  0,  0) ),
-    Label(  'Building'             , 13 ,      255 , 'construction'    , 2       , False        , False        , (192,  0,128) ),
-    Label(  'Building'             , 14 ,      255 , 'construction'    , 2       , False        , False        , ( 64,192,  0) ),
-    Label(  'Building'             , 15 ,      255 , 'construction'    , 2       , False        , False        , (  0,128, 64) ),
+    Label(  'Building'             , 12 ,      255 , 'construction'    , 2       , False        , True         , (128,  0,  0) ),
+    Label(  'Building'             , 13 ,      255 , 'construction'    , 2       , False        , True         , (192,  0,128) ),
+    Label(  'Building'             , 14 ,      255 , 'construction'    , 2       , False        , True          , ( 64,192,  0) ),
+    Label(  'Building'             , 15 ,      255 , 'construction'    , 2       , False        , True         , (  0,128, 64) ),
     Label(  'Fence'                , 16 ,        5 , 'construction'    , 2       , False        , False        , ( 64,128, 64) ),
     
     Label(  'Pavement'             , 17 ,        6 , 'flat'            , 3       , False        , False        , ( 64,192,128) ),
-    Label(  'Pavement'             , 18 ,      255 , 'flat'            , 3       , False        , False        , (128,128,192) ),
-    Label(  'Road'                 , 19 ,        7 , 'flat'            , 3       , False        , False        , (192,  0, 64) ),
-    Label(  'Pavement'             , 20 ,      255 , 'flat'            , 3       , False        , False        , (  0,  0,192) ),
+    Label(  'Pavement'             , 18 ,      255 , 'flat'            , 3       , False        , True         , (128,128,192) ),
+    Label(  'Road'                 , 19 ,      255 , 'flat'            , 3       , False        , True         , (192,  0, 64) ),
+    Label(  'Pavement'             , 20 ,        7 , 'flat'            , 3       , False        , False        , (  0,  0,192) ),
     
     Label(  'Car'                  , 21 ,        8 , 'vehicle'         , 4       , True         , False        , ( 64,128,192) ),
-    Label(  'Car'                  , 22 ,      255 , 'vehicle'         , 4       , True         , False        , (128, 64, 64) ),
-    Label(  'Car'                  , 23 ,      255 , 'vehicle'         , 4       , True         , False        , (192,128,192) ),
-    Label(  'Car'                  , 24 ,      255 , 'vehicle'         , 4       , True         , False        , ( 64,  0,128) ),
+    Label(  'Car'                  , 22 ,      255 , 'vehicle'         , 4       , True         , True         , (128, 64, 64) ),
+    Label(  'Car'                  , 23 ,      255 , 'vehicle'         , 4       , True         , True         , (192,128,192) ),
+    Label(  'Car'                  , 24 ,      255 , 'vehicle'         , 4       , True         , True         , ( 64,  0,128) ),
     
     Label(  'Sky'                  , 25 ,        9 , 'sky'             , 5       , False        , False        , (128,128,128) ),
     
     Label(  'Tree'                 , 26 ,       10 , 'nature'          , 6       , False        , False        , (192,192,  0) ),
-    Label(  'Tree'                 , 27 ,      255 , 'nature'          , 6       , False        , False        , (128,128,  0) ),
+    Label(  'Tree'                 , 27 ,      255 , 'nature'          , 6       , False        , True         , (128,128,  0) ),
 ]
 
 
