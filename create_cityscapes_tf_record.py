@@ -11,34 +11,27 @@ import os
 import numpy as np
 import PIL.Image
 
-#import tensorflow as tf
-import tensorflow.compat.v1 as tf
+import tensorflow as tf
+#import tensorflow.compat.v1 as tf
 
 flags = tf.app.flags
 tf.flags.DEFINE_string('input_pattern', '',
                        'Cityscapes dataset root folder.')
 tf.flags.DEFINE_string('annot_pattern', '',
                        'Pattern matching input images for Cityscapes.')
-tf.flags.DEFINE_string('cityscapes_dir', '',
+tf.flags.DEFINE_string('cityscapes_dir', './',
                        'Pattern matching ground truth images for Cityscapes.')
-tf.flags.DEFINE_string('split_type', '',
+tf.flags.DEFINE_string('split_type', 'test',
                        'Type of split: `train`, `test` or `val`.')
-tf.flags.DEFINE_string('output_dir', '', 'Output data directory.')
+tf.flags.DEFINE_string('output_dir', 'data_cap/tf_record', 'Output data directory.')
 
 FLAGS = flags.FLAGS
 
-
 tf.logging.set_verbosity(tf.logging.INFO)
 
-
-_DEFAULT_PATTEN = {
-    'input': '*.png',
-    'annot': '*.png'
-}
-
 _DEFAULT_DIR = {
-    'image': 'Original_data',
-    'label': 'Gray_data'
+    'image': 'data_cap/Original_data',
+    'label': 'data_cap/gray_data2'
 }
 
 
@@ -120,9 +113,9 @@ def main(_):
 
     if FLAGS.cityscapes_dir:
         search_image_files = os.path.join(FLAGS.cityscapes_dir,
-            _DEFAULT_DIR['image'], FLAGS.split_type, _DEFAULT_PATTEN['input'])
+            _DEFAULT_DIR['image'], FLAGS.split_type, '*.png')
         search_annot_files = os.path.join(FLAGS.cityscapes_dir,
-            _DEFAULT_DIR['label'], FLAGS.split_type, _DEFAULT_PATTEN['annot'])
+            _DEFAULT_DIR['label'], FLAGS.split_type, '*_L.png')
         image_filenames = glob.glob(search_image_files)
         annot_filenames = glob.glob(search_annot_files)
     else:

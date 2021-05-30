@@ -8,8 +8,7 @@ import argparse
 import os
 import sys
 
-import tensorflow.compat.v1 as tf
-
+import tensorflow as tf
 
 import deeplab_model
 from utils import preprocessing
@@ -50,14 +49,14 @@ parser.add_argument('--learning_rate_policy', type=str, default='poly',
 parser.add_argument('--max_iter', type=int, default=30000,
                     help='Number of maximum iteration used for "poly" learning rate policy.')
 
-parser.add_argument('--data_dir', type=str, default='./dataset/',
+parser.add_argument('--data_dir', type=str, default='./data_cap/',
                     help='Path to the directory containing the PASCAL VOC data tf record.')
 
 parser.add_argument('--base_architecture', type=str, default='resnet_v2_101',
                     choices=['resnet_v2_50', 'resnet_v2_101'],
                     help='The architecture of base Resnet building block.')
 
-parser.add_argument('--pre_trained_model', type=str, default='./resnet_v2_101/resnet_v2_101.ckpt',
+parser.add_argument('--pre_trained_model', type=str, default='./resnet_v2/resnet_v2_101.ckpt',
                     help='Path to the pre-trained model checkpoint.')
 
 parser.add_argument('--output_stride', type=int, default=16,
@@ -83,8 +82,8 @@ parser.add_argument('--debug', action='store_true',
                     help='Whether to use debugger to track down bad values during training.')
 
 _NUM_CLASSES = 12
-_HEIGHT = 513
-_WIDTH = 513
+_HEIGHT = 720
+_WIDTH = 960
 _DEPTH = 3
 _MIN_SCALE = 0.5
 _MAX_SCALE = 2.0
@@ -127,7 +126,7 @@ def parse_record(raw_record):
       'image/encoded':
       tf.FixedLenFeature((), tf.string, default_value=''),
       'image/format':
-      tf.FixedLenFeature((), tf.string, default_value='jpeg'),
+      tf.FixedLenFeature((), tf.string, default_value='png'),
       'label/encoded':
       tf.FixedLenFeature((), tf.string, default_value=''),
       'label/format':

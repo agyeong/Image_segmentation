@@ -5,13 +5,26 @@ from __future__ import division
 from __future__ import print_function
 
 import tensorflow as tf
+#import tensorflow.compat.v1 as tf
+#tf.disable_v2_behavior()
 
 from tensorflow.contrib.slim.nets import resnet_v2
 from tensorflow.contrib import layers as layers_lib
 from tensorflow.contrib.framework.python.ops import arg_scope
 from tensorflow.contrib.layers.python.layers import layers
-
 from utils import preprocessing
+
+#gpus = tf.config.experimental.list_physical_devices('GPU')
+#if gpus:
+#    try:
+#        # Currently, memory growth needs to be the same across GPUs
+#        for gpu in gpus:
+#            tf.config.experimental.set_memory_growth(gpu, True)
+#        logical_gpus = tf.config.experimental.list_logical_devices('GPU')
+#        print(len(gpus), "Physical GPUs,", len(logical_gpus), "Logical GPUs")
+#    except RuntimeError as e:
+#        # Memory growth must be set before GPUs have been initialized
+#        print(e)
 
 _BATCH_NORM_DECAY = 0.9997
 _WEIGHT_DECAY = 5e-4

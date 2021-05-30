@@ -19,13 +19,13 @@ import timeit
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument('--image_data_dir', type=str, default='dataset/VOCdevkit/VOC2012/JPEGImages',
+parser.add_argument('--image_data_dir', type=str, default='./data_cap/Original_data/test',
                     help='The directory containing the image data.')
 
-parser.add_argument('--label_data_dir', type=str, default='dataset/VOCdevkit/VOC2012/SegmentationClassAug',
+parser.add_argument('--label_data_dir', type=str, default='./data_cap/gray_data2/test',
                     help='The directory containing the ground truth label data.')
 
-parser.add_argument('--evaluation_data_list', type=str, default='./dataset/val.txt',
+parser.add_argument('--evaluation_data_list', type=str, default='./dataset/test.txt',
                     help='Path to the file listing the evaluation images.')
 
 parser.add_argument('--model_dir', type=str, default='./model',
@@ -41,7 +41,7 @@ parser.add_argument('--output_stride', type=int, default=16,
                     choices=[8, 16],
                     help='Output stride for DeepLab v3. Currently 8 or 16 is supported.')
 
-_NUM_CLASSES = 21
+_NUM_CLASSES = 12
 
 
 def main(unused_argv):
@@ -49,8 +49,8 @@ def main(unused_argv):
   os.environ['TF_ENABLE_WINOGRAD_NONFUSED'] = '1'
 
   examples = dataset_util.read_examples_list(FLAGS.evaluation_data_list)
-  image_files = [os.path.join(FLAGS.image_data_dir, filename) + '.jpg' for filename in examples]
-  label_files = [os.path.join(FLAGS.label_data_dir, filename) + '.png' for filename in examples]
+  image_files = [os.path.join(FLAGS.image_data_dir, filename) + '.png' for filename in examples]
+  label_files = [os.path.join(FLAGS.label_data_dir, filename) + '_L.png' for filename in examples]
 
   features, labels = preprocessing.eval_input_fn(image_files, label_files)
 
