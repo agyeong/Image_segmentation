@@ -4,6 +4,9 @@
 #### DeepLab V3+ model.
 https://github.com/rishizek/tensorflow-deeplab-v3-plus
 
+- 실행환경
+   python 3.6.6
+
 ```
 * 학습
 python3 train.py
