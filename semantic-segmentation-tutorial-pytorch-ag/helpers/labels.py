@@ -75,7 +75,7 @@ labels = [
     Label(  'Building'             , 11 ,        4 , 'construction'    , 2       , False        , False        , ( 64,  0, 64) ),
     Label(  'Building'             , 12 ,      255 , 'construction'    , 2       , False        , True         , (128,  0,  0) ),
     Label(  'Building'             , 13 ,      255 , 'construction'    , 2       , False        , True         , (192,  0,128) ),
-    Label(  'Building'             , 14 ,      255 , 'construction'    , 2       , False        , True          , ( 64,192,  0) ),
+    Label(  'Building'             , 14 ,      255 , 'construction'    , 2       , False        , True          ,( 64,192,  0) ),
     Label(  'Building'             , 15 ,      255 , 'construction'    , 2       , False        , True         , (  0,128, 64) ),
     Label(  'Fence'                , 16 ,        5 , 'construction'    , 2       , False        , False        , ( 64,128, 64) ),
     
