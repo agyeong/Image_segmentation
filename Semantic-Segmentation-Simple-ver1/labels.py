@@ -23,12 +23,13 @@ labels = [
     Label(  'Building'             , 4       ,   (192,  0,128)     ),
     Label(  'Building'             , 4       ,   ( 64,192,  0)     ),
     Label(  'Building'             , 4       ,   (  0,128, 64)     ),
-    Label(  'Fence'                , 5       ,   ( 64,128, 64)     ),
+    Label(  'Fence'                , 5       ,   ( 64, 64,128)     ),
     
     Label(  'Pavement'             , 6       ,   ( 64,192,128)     ),
     Label(  'Pavement'             , 6       ,   (128,128,192)     ),
     Label(  'Pavement'             , 6       ,   (  0,  0,192)     ),
-    Label(  'Road'                 , 7       ,   (192,  0, 64)     ),
+    Label(  'Road'                 , 7       ,   (128, 64,128)     ),
+    Label(  'Road'                 , 7       ,   (128,  0,192)     ),
     
     Label(  'Car'                  , 8       ,   ( 64,128,192)     ),
     Label(  'Car'                  , 8       ,   (128, 64, 64)     ),
