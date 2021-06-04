@@ -3,3 +3,4 @@ data.npz
 result/
 __pycache__
 .ipynb_checkpoints/
+*.csv
