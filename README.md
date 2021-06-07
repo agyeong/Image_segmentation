@@ -2,7 +2,7 @@
 
 ### How to use    
 
-1. Prepare using dataset    
+1. Prepare using dataset folder   
 ``` 
   {PROJECT_DIR}/data/Original_data   
   {PROFECT_DIR}/data/Labeled_data     // annatated dataset. *_L.png   
@@ -21,3 +21,9 @@
     >  **RUN_norm2**: weight + norm ver2   
     >  **RUN_jitter**: weight + color jitter   
     >  **RUN_new**: change model architecture (plus 1 hidden layer in decoding part)   
+     
+    
+    
+    
+### Reference
+https://github.com/hoya012/semantic-segmentation-tutorial-pytorch
