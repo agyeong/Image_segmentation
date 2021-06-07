@@ -139,7 +139,7 @@ class DeepLabHead(nn.Sequential):
             nn.Conv2d(256, 256, 3, padding=1, bias=False),
             nn.BatchNorm2d(256),
             nn.ReLU(),
-            
+           # nn.Dropout(0.5),
             nn.Conv2d(256, 128, 3),
             nn.BatchNorm2d(128),
             nn.ReLU(),
