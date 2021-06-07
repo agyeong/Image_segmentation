@@ -5,7 +5,7 @@
 1. Prepare using dataset folder   
 ``` 
   {PROJECT_DIR}/data/Original_data   
-  {PROFECT_DIR}/data/Labeled_data     // annatated dataset. *_L.png   
+  {PROJECT_DIR}/data/Labeled_data     // annatated dataset. *_L.png   
 ```  
 2. Data preprocessing   
   주피터 환경에서 **data_preprocessing.ipynb** 실행    
