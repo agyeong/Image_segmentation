@@ -6,7 +6,7 @@ Semantic Image Segmentation
 
 ## Data
 - Original data : file01.png, file02.png, ...
-- Labeled data : file01_\L.png, file02\_L.png
+- Labeled data : file01_L.png, file02\_L.png
 
 ## Class
 - Total 11 class + Void class
