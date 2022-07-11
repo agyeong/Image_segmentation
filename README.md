@@ -1,8 +1,4 @@
-# Capstone-Project2
-> 순천향대학교 빅데이터공학과 2021-1 Capstone Project 2
-
-## Topic
-Semantic Image Segmentation
+# Semantic Image Segmentation
 
 ## Data
 - Original data : file01.png, file02.png, ...
